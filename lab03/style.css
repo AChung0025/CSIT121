@@ -1,16 +1,23 @@
-body {
-    background-color:rgb(82, 155, 143)
+hr {
+    border-color: black;
     }
+    
 h1 {
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
-    background-color: rgb(108, 184, 165);
-    font-size: 75px;
+    background-color: rgb(8, 8, 8);
+    font-size: 80px;
+    font-variant: small-caps;
     }
 
 h2 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 25px;
     color: white;
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 50px;
     }
+
+section {font-size: 15px;}
+
+
+
