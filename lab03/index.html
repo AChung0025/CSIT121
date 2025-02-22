@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>Learning Web Standards</title>
+
+    <style>
+        body {}
+        header {border-style: solid; background-color: black;}
+        p {text-align: center;}
+        .article {text-align:center; background-color: white;}
+        #foot {text-align:center; background-color: white;}
+        .list-titles { font-family: 'Courier New', Courier, monospace}
+        a {color: rgb(233, 56, 138); text-decoration: none;}           
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Learning Web Standards</h1>
+    </header>
+        <main>
+            <!-- LAB 1 & 2 -->
+            <article>
+                <hr>
+                <h2>Labs 1 & 2</h2>
+                <!--hr tag for horizontal line across webpage -->
+                <p><i>Published on February 9,2025 by Student, A.Chung</i></p>
+                <hr>
+                    <p class="article">During my lessons, I have learned the importance of Web Standards and HTML. Web standards are used to
+                     ensure better accessibility, performance, and security for end-users, this includes the use of HTML (HyperText Markup Language).
+                     HTML is used in creating websites by providing a standard structure, used worldwide. This 
+                     is helpful so that developers who want to create a website will follow the same standards, giving consistency.
+                    </p>
+                <h3 class="list-titles">What I Learned about Web Standards:</h3>
+                    <ul>
+                        <li>Consistency</li>
+                        <li>Accessibility</li>
+                        <li>Performance</li>
+                        <li>Security</li>
+                    </ul>
+                <h3 class="list-titles">What I Learned about HTML:</h3>
+                    <ul>
+                        <li>Provides a fundamental structure.</li>
+                        <li>Uses element tags to show how content is shown</li>
+                    </ul>
+            </article>
+<br>
+            <!-- LAB 3 -->    
+            <article>
+                <hr>
+                <h2 style="color: blue;"> Lab 3 </h2>
+                <p><i>Published on February 21,2025 by Student, A.Chung</i></p>
+                <hr>
+                <p class="article">In this module I learned about CSS (Cascading Style Sheets). HTML is used to structure your webpage, while CSS is used
+                    to manipulate it's style. I knew about external and inline but there is also embedded or internal, which is place inside the head.
+                    I find that both embedded and internal is good for simple webpages with maybe one or two pages, but for websites that have mulptiple, 
+                    external method can neatly organize all your styles in a file. To target certain elements you can use the class and id attribute.
+                </p>
+                <h3 class="list-titles">What I Learned about CSS:</h3>
+                <ul>
+                    <li>CSS syntax: <b>Selector: { property ; value } </b></li>
+                    <li>Styles go in cascading order by highest priority<br><b>1st: Inline style<br>2nd: Embedded styles<br>3rd: External Style Sheet</b>
+                    <br>Even if you have a external style sheet the Inline style is top priority and will be the style shown on website. (Example: Lab 3 header, internal is red, and external h2 is set to white like Lab 1 & 2.)</li>
+                </ul>
+            </article>
+<br>
+            <!--add additional resources as you go-->
+            <hr>
+            <h4>Resources:</h4>
+                <ol>
+                    <li>MDN - <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model">Web Standards</a></li>
+                    <li>W3 Schools - <a href="https://www.w3schools.com/html/html_intro.asp">HTML introduction</a></li>
+                </ol>
+
+        </main>
+    <footer id="foot">
+        <p><br>© 2025 Student in CSIT 121</p>
+    </footer>
+</body>
+</html>
