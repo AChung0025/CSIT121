@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <title>JPEG</title>
+    <style>
+        body {background-color: black;
+          color: white;
+          font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          font-size: x-large;
+        }
+        div.mycontainer div { 
+            width: 50%; 
+            float:left;
+            text-align: center;
+            padding-top: 5%;
+        }
+        nav {float:left;
+             overflow: hidden;
+             position: fixed;
+             top: 0%;
+             font-size: 20px;
+        }
+        #footer {
+                 display: block;
+                 position: fixed;
+                 bottom: 2px;
+        }
+    </style>    
+</head>
+<body>
+    <nav>             
+        <a href="index.html" style="text-decoration: none; text-align: left; color:white;">HOME</a>
+        <a href = page1gif.html style="text-decoration: none; text-align: left; color:rgb(140, 0, 255)">GIF</a>
+        <a href = page2jpg-jpeg.html style="text-decoration: none; text-align: left; color: rgb(66, 103, 207)">JPG/JPEG</a>
+        <a href = page3png.html style="text-decoration: none; text-align: left; color: rgb(89, 212, 202);">PNG</a>
+    </nav>
+    <div class="mycontainer">
+        <div>
+            <img src="images/mybaby.jpg" alt="The perfect Calico" class="img" style="padding-top: 20px;">
+        </div>
+        <div>
+            <article>
+            <header>
+                <h1>JPG/JPEG</h1>
+            </header>              
+                    <p>JPG/JPEG stands for Joint Photographic Experts Group<br>
+                        JPG/JPEG is commonly used for photographs because it can handle up to 16.7 million colors and is 
+                        supported in most browsers and editing software. After editing and saving, you may lose some data 
+                        due to lossy compression. This will reduce the quality of the photo.
+                        The file extension for a JPG image is .jpg. This photo is of an American Shorthair Calico with green eyes. 
+                        I love cats, so I used a picture of my cat here for this example. I have edited this photo many times, 
+                        and as you can see, the image has become a bit blurry.
+                    </p>
+                </article>
+        <em>Source: Own photo and <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image">MDN web docs</a></em>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p><br>© 2025 Student in CSIT 121</p>
+    </footer>    
+</body>
+
+</html>
