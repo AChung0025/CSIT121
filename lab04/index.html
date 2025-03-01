@@ -4,37 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>LAB 04</title>
-    <style>
-        body {background-color: black;
-              color: white;
-              font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-              background-image: url(images/stillmax-monster.gif);
-              background-repeat: no-repeat;
-              background-size: cover;
-        }
-
-        h1 {text-align: center;
-            font-variant: small-caps;
-        }
-        div.menulist div { 
-            width: 50%; 
-            float:left;
-            text-align: left;
-            font-size: xx-large;
-        }
-        a {text-decoration: none;}
-        a:visited {color:black;}
-        #footer {display: block;
-                 position: fixed;
-                 bottom: 2px;
-        }
-    </style>    
+    <link rel="stylesheet" href="style.css">
+    <title>LAB 04</title>  
 </head>
 
-<body>
-    <h1 style="font-size: 75px;">Media and Visual Elements</h1>
-    <div class="menulist">
+<body id="index">
+    <h1 id="h1index">Media and Visual Elements</h1>
+    <div class="menulist0">
         <div>
             <header>
                 <h2 style="text-align: center;">Commonly used Image Formats</h2>
@@ -42,15 +18,15 @@
         </div>
         <div>
             <ul>
-                <li><a href = page1gif.html>GIF (Graphics Interchange Format)</a></li>
-                <li><a href = page2jpg-jpeg.html>JPG (Joint Photographic Experts Group)</a></li>
-                <li><a href = page3png.html>PNG (Portable Network Graphics)</a></li>
+                <li><a href = page1gif.html class="p0">GIF (Graphics Interchange Format)</a></li>
+                <li><a href = page2jpg-jpeg.html class="p0">JPG (Joint Photographic Experts Group)</a></li>
+                <li><a href = page3png.html class="p0">PNG (Portable Network Graphics)</a></li>
                 <li>and many more!</li>
             </ul>
         </div>
     </div>
     <footer id="footer">
-        <p style="font-size: xx-large;"><br>© 2025 Student in CSIT 121</p>
+        <p class="footerp"><br>© 2025 Student in CSIT 121</p>
     </footer>         
 </body>
 </html>
