@@ -1,0 +1,143 @@
+/* General settings */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ /* Wrapper for layout */
+ .wrapper {
+     display: flex;
+     flex-flow: row wrap;
+ }
+ 
+ /* Default flex settings for small screens */
+ .wrapper > * {
+     padding: 10px;
+     flex: 1 100%;
+ }
+ 
+ /* Body styling with background image */
+ body {
+     background-image: url('bubbles-pexels-photo-6543897.jpeg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     padding-top: 5%;
+     padding-bottom: 5%;
+     padding-left: 15%;
+     padding-right: 15%;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+ /* Header section */
+ .header {
+     background: #A7ABDE;
+     text-align: center;
+ }
+ 
+ /* Main article */
+ .main {
+     text-align: center;
+     background: #CED1F8;
+ }
+ 
+ /* Aside section sidebar */
+ .aside-1 {
+     background: #ECD2E0;
+     text-align: center;
+ }
+ 
+ /* List style in aside */
+ .aside-1 ul {
+     list-style-type: none;
+ }
+ 
+ /* Resources section */
+ .resources {
+     background: #FFF0F1;
+     color: rgb(44, 44, 44);
+ }
+ 
+ /* Remove bullet points from ordered list in resources */
+ .resources ol {
+     list-style: none;
+ }
+ 
+ /* Hover effect for resource links */
+ .resources a:hover {
+     color: pink;
+ }
+ 
+ /* Footer */
+ .footer {
+     text-align: center;
+ }
+ 
+ /* Navbar styles */
+ .navbar ul {
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+ }
+ 
+ .navbar a {
+     text-decoration: none;
+     padding: 15px;
+     display: block;
+     text-align: center;
+     background-color: #FFA5D6;
+ }
+ 
+ .navbar a:hover {
+     background-color: #FFD6EE;
+ }
+ 
+ /* Media queries for responsive design */
+ 
+ /* Small screens (min-width: 600px) */
+ @media all and (min-width: 600px) {
+     .aside-1 {
+         flex: 1 0 0;
+     }
+ 
+     .navbar li {
+         float: left;
+     }
+ 
+     .navbar ul {
+         overflow: hidden;
+     }
+ }
+ 
+ /* Larger screens (min-width: 800px) */
+ @media all and (min-width: 800px) {
+     .main {
+         flex: 3 0px;
+     }
+ 
+     .aside-1 {
+         order: 1;
+     }
+ 
+     .main {
+         order: 2;
+     }
+ 
+     .resources {
+         order: 3;
+     }
+ 
+     .footer {
+         order: 4;
+     }
+ 
+     .navbar li {
+         float: left;
+     }
+ 
+     .navbar a {
+         padding: 15px;
+     }
+ }
+   
