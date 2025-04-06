@@ -2,10 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Contact Form</title>
         <link rel="stylesheet" href="style.css">
-    
     </head>
 
     <body>
@@ -14,69 +13,82 @@
                 <h1>Contact Form</h1>
             </div>
         </div>
-        <div>
-            <nav>
-                <ul class="navbar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tierlist.html">Tier List</a></li>
-                    <li><a href="contactform.html">Contact Form</a></li>
-                </ul>
-            </nav>
-        </div>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tierlist.html">Tier List</a></li>
+                <li><a href="contactform.html">Contact Form</a></li>
+            </ul>
+        </nav>
+
         <div class="form">
             <form>
                 <table class="contactform">
                     <tr>
-                        <td for="firstname">First Name:</td>
-                        <td><input type="text" id="firstname" name="firstname" placeholder="Your First Name Here" required></td>
+                        <td>First Name:</td>
+                        <td>
+                            <input type="text" id="firstname" name="firstname" placeholder="Your First Name Here" required>
+                        </td>
                         <td>Have you played MCOC Before?</td>
-                        <td>                        
-                            <label for="Yes">Yes</label>
-                            <input type="radio" name="name" value="Yes">
-                            <label for="No">No</label>
-                            <input type="radio" name="name" value="No">
+                        <td>
+                            <input type="radio" id="played_yes" name="played_mcoc" value="Yes">
+                            <label for="played_yes">Yes</label>
+                            <input type="radio" id="played_no" name="played_mcoc" value="No">
+                            <label for="played_no">No</label>
                         </td>
                     </tr>
+
                     <tr>
-                        <td for="lastname">Last Name:</td>
-                        <td><input type="text" id="lastname" name="lastname" placeholder="Your Last Name Here" required></td>
+                        <td>Last Name:</td>
                         <td>
-                            <label for="ranking">Do you agree with the rankings?</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Your Last Name Here" required>
                         </td>
                         <td>
-                            <select for="ranking" name="ranking">
+                            <label for="ranking_agreement">Do you agree with the rankings?</label>
+                        </td>
+                        <td>
+                            <select name="ranking_agreement" id="ranking_agreement">
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
                         </td>
                     </tr>
+
                     <tr>
-                        <td for="email">Email Address</td>
-                        <td><input type="email" id="email" name="email" placeholder="Enter email address"></td>
+                        <td>Email Address:</td>
+                        <td>
+                            <input type="email" id="email" name="email" placeholder="Enter email address">
+                        </td>
                         <td>How would you rate the look of my tier list?</td>
                         <td>
-                            <label for="good">Good</label>
-                            <input type="radio" name="good" value="good">
-                            <label for="okay">Okay</label>
-                            <input type="radio" name="okay" value="okay">
-                            <label for="bad">Bad</label>
-                            <input type="radio" name="bad" value="bad">
+                            <input type="radio" id="rating_good" name="rating" value="good">
+                            <label for="rating_good">Good</label>
+                            <input type="radio" id="rating_okay" name="rating" value="okay">
+                            <label for="rating_okay">Okay</label>
+                            <input type="radio" id="rating_bad" name="rating" value="bad">
+                            <label for="rating_bad">Bad</label>
                         </td>
                     </tr>
-                    <br>
+
                     <tr>
                         <td>Comments:</td>
-                        <td><textarea name="comments" rows="5" cols=18 wrap="hard"></textarea></td>
+                        <td colspan="3">
+                            <textarea name="comments" rows="5" cols="50" wrap="hard" placeholder="Leave your feedback here..."></textarea>
+                        </td>
                     </tr>
 
+                    <tr>
+                        <td colspan="4" style="text-align: center;">
+                            <button type="submit">Submit</button>
+                        </td>
+                    </tr>
                 </table>
             </form>
         </div>
+
         <footer class="footer">
             <p><br>© 2025 Student in CSIT 121</p>
         </footer>
     </body>
 </html>
-
-<!--email <address>text comment <fieldset>
-    ask three questions asking about the tier rank list-->
