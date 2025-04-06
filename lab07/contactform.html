@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1">
+        <title>Contact Form</title>
+        <link rel="stylesheet" href="style.css">
+    
+    </head>
+
+    <body>
+        <div class="hero-image2">
+            <div class="hero-text2">
+                <h1>Contact Form</h1>
+            </div>
+        </div>
+        <div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tierlist.html">Tier List</a></li>
+                    <li><a href="contactform.html">Contact Form</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="form">
+            <form>
+                <table class="contactform">
+                    <tr>
+                        <td for="firstname">First Name:</td>
+                        <td><input type="text" id="firstname" name="firstname" placeholder="Your First Name Here" required></td>
+                        <td>Have you played MCOC Before?</td>
+                        <td>                        
+                            <label for="Yes">Yes</label>
+                            <input type="radio" name="name" value="Yes">
+                            <label for="No">No</label>
+                            <input type="radio" name="name" value="No">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td for="lastname">Last Name:</td>
+                        <td><input type="text" id="lastname" name="lastname" placeholder="Your Last Name Here" required></td>
+                        <td>
+                            <label for="ranking">Do you agree with the rankings?</label>
+                        </td>
+                        <td>
+                            <select for="ranking" name="ranking">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td for="email">Email Address</td>
+                        <td><input type="email" id="email" name="email" placeholder="Enter email address"></td>
+                        <td>How would you rate the look of my tier list?</td>
+                        <td>
+                            <label for="good">Good</label>
+                            <input type="radio" name="good" value="good">
+                            <label for="okay">Okay</label>
+                            <input type="radio" name="okay" value="okay">
+                            <label for="bad">Bad</label>
+                            <input type="radio" name="bad" value="bad">
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>Comments:</td>
+                        <td><textarea name="comments" rows="5" cols=18 wrap="hard"></textarea></td>
+                    </tr>
+
+                </table>
+            </form>
+        </div>
+        <footer class="footer">
+            <p><br>© 2025 Student in CSIT 121</p>
+        </footer>
+    </body>
+</html>
+
+<!--email <address>text comment <fieldset>
+    ask three questions asking about the tier rank list-->
