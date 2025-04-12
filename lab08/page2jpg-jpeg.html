@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>JPG/JPEG</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+          <h1>About JPG/JPEG Images</h1>
+    </header>
+      <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; OPEN</span>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="page1gif.html" class="gif-link">GIF (Graphics Interchange Format)</a>
+          <a href="page2jpg-jpeg.html" class="jpg-link">JPG (Joint Photographic Experts Group)</a>
+          <a href="page3png.html" class="png-link">PNG (Portable Network Graphics)</a>
+        </div>
+    <div class="grid-container">
+        <div class="flex-child">
+            <img src="mybaby.jpg" alt="The perfect Calico cat with green eyes" class="page-image" width="300">
+        </div>
+        <div>
+            <article>
+                <header>
+                    <h2>JPG/JPEG</h2>
+                </header>              
+                    <p>JPG/JPEG stands for Joint Photographic Experts Group<br>
+                        JPG/JPEG is commonly used for photographs because it can handle up to 16.7 million colors and is 
+                        supported in most browsers and editing software. After editing and saving, you may lose some data 
+                        due to lossy compression. This will reduce the quality of the photo.
+                        The file extension for a JPG image is .jpg. This photo is of an American Shorthair Calico with green eyes. 
+                        I love cats, so I used a picture of my cat here for this example. I have edited this photo many times, 
+                        and as you can see, the image has become a bit blurry.<br>
+                        <em>Source: Own photo and <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image">MDN web docs</a></em>
+                    </p>
+            </article>
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <p class="footer-text">&copy; 2025 Student in CSIT 121</p>
+</footer>
+
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>   
+</body>
+</html> 

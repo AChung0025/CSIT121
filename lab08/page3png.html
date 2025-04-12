@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>PNG</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+          <h1>About PNG Images</h1>
+    </header>
+      <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; OPEN</span>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="page1gif.html" class="gif-link">GIF (Graphics Interchange Format)</a>
+          <a href="page2jpg-jpeg.html" class="jpg-link">JPG (Joint Photographic Experts Group)</a>
+          <a href="page3png.html" class="png-link">PNG (Portable Network Graphics)</a>
+        </div>
+    <div class="grid-container">
+        <div>
+            <article>
+                <header>
+                    <h2>PNG</h2>
+                </header>              
+                    <p>GIF stands for Portable Network Graphics<br>
+                        This image format supports millions of colors with the ability to have multiple layers 
+                        and semi/transparent backgrounds. They are most used when making logos. <a href="https://www.adobe.com/creativecloud/file-types/image/comparison/jpeg-vs-png.html#:~:text=In%20contrast%2C%20PNG%20files%20benefit,graphs%20containing%20lots%20of%20figures.">
+                        PNG images are lossless compression files, no data is lost when the image is edited and saved.</a> I use this PNG image of the 
+                        Instagram logo since this is the app I use the most, and as shown, rescaling and exporting 
+                        did not affect the quality.<br>
+                        <em>Source: <a href="https://www.adobe.com/creativecloud/file-types/image/comparison/jpeg-vs-png.html#:~:text=In%20contrast%2C%20PNG%20files%20benefit,graphs%20containing%20lots%20of%20figures.">Adobe</a></em>
+                        <em>Source: <a href="https://commons.wikimedia.org/wiki/File:Instagram-Icon.png">Wikimedia</a></em>
+                    </p>
+            </article>
+        </div>
+
+        <div>
+            <img src="Instagram-Icon.png" alt="Instagram Logo PNG" class="page-image" width="200">
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <p class="footer-text">&copy; 2025 Student in CSIT 121</p>
+</footer>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>  
+</body>
+</html>

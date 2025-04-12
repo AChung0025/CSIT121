@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>LAB 08</title>  
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>Interactive Menu</h1>
+        </div>
+      </div>
+    </header>
+      <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; OPEN</span>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="page1gif.html" class="gif-link">GIF (Graphics Interchange Format)</a>
+          <a href="page2jpg-jpeg.html" class="jpg-link">JPG (Joint Photographic Experts Group)</a>
+          <a href="page3png.html" class="png-link">PNG (Portable Network Graphics)</a>
+        </div>
+        <div>
+          <h2>Lab 08</h2>
+          <p>In this lesson, we are introduced to JavaScript and CSS Anitmation. JavaScript is much like Python 
+            and other programming languages, where you are able to create functions for specific elements 
+            or actions, that can be reused. This enables user to be able to interact with site. CSS Animation 
+            is used with transition or animating HTML elements. Transition lets you transform the <a href="https://www.w3schools.com/css/css3_transitions.asp">
+            "CSS property you want to add an effect to the duration of the effect" (w3schools)</a>, with animation 
+            you can set multiple points using keyframes.    
+          </p>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <th>JavaScript</th>
+              <th>CSS Anitmation</th>
+            </tr>
+            <tr>
+              <td>JavaScript is a a programming language that is use along side HTML and CSS<br> 
+                to enable websites to be interactive and animated.
+              </td>
+              <td>CSS Animation is used to animate HTML elements without JS. </td>
+            </tr>
+            <tr>
+              <td>HTML - Structure<br>CSS - Styling<br>JS - Behavioral</td>
+              <td>CSS properties for animation:<br>Transition and Animation</td>
+            </tr>
+            <tr>
+              <td>JS commonly used for:<br>Store useful values inside variables<br>Operations on pieces of texts (strings)<br>Running code in response to certain events occuring on web page</td>
+              <td>CSS commonly used for:<br>hover effects<br>Adding movement to HTML element on page</td>
+            </tr>
+            <tr>
+              <td>document.getElementByID(ID name in HTML)<br>document.querySelector(HTML element)</td>
+              <td>transition: transform<br>@keyframes <em>animation name</em></td>
+            </tr>
+          </table>
+        </div>
+      <div>
+        <h5>Resources:</h5>
+          <ul>
+            <li><a href="https://www.w3schools.com/css/css3_animations.asp">W3 School - CSS Animation</a></li>
+            <li><a href="https://www.w3schools.com/css/css3_transitions.asp">W3 School - CSS Transitions</a></li>
+            <li><a href="https://www.w3schools.com/css/css_grid.asp">W3 School - CSS Grid Layout Module</a></li>
+            <li><a href="https://www.w3schools.com/howto/howto_js_sidenav.asp">W3 School - How TO - Side Navigation</a></li>
+            <li><a href="https://www.w3schools.com/js/default.asp">W3 School - JavaScript Tutorial</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN - JavaScript</a></li>
+          </ul>
+      </div>
+<footer id="footer">
+  <p class="footer-text">&copy; 2025 Student in CSIT 121</p>
+</footer>
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+  </div>    
+</body>
+
+</html> 

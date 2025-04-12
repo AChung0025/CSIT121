@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>GIF</title>
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+          <h1>About GIF Images</h1>
+    </header>
+      <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; OPEN</span>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="page1gif.html" class="gif-link">GIF (Graphics Interchange Format)</a>
+          <a href="page2jpg-jpeg.html" class="jpg-link">JPG (Joint Photographic Experts Group)</a>
+          <a href="page3png.html" class="png-link">PNG (Portable Network Graphics)</a>
+        </div>
+    <div class="grid-container">
+        <div>
+            <article>
+                <header><h2>GIF</h2></header>
+            <p>GIF stands for Graphics Interchange Format<br>
+                    The file extension for a GIF is .gif, GIFs can be either still or animated graphics.  
+                    This image was shown to me in the <i>All About Standard Web Graphics</i> lesson. It is of a one eyed 
+                    orange monster bouncing up and down, while in the background, there is a color wheel spinning clockwise.
+                    I decided to use this image because it is a great example of what a GIF image looks like. 
+                    This displays the <a href="https://www.eminentseo.com/blog/gif-images-clever-tools-marketing/">perfect-loop GIF</a>
+                    , where the animation at the start is perfectly synced with the ending to make it appear as if it is constant. 
+                    GIFs are great for expressing reactions and are used for marketing and visual cinemographs.<br>
+                    <em>Source: <a href="https://www.eminentseo.com/blog/gif-images-clever-tools-marketing/">eminentseo.com</a></em>
+            </p>
+            </article>
+        </div>
+        <div>
+            <img src="max-monster.gif" alt="Animated monster GIF" class="page-image">
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+    <p class="footer-text">&copy; 2025 Student in CSIT 121</p>
+</footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>  
+</body>
+</html>
+
