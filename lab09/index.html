@@ -63,70 +63,61 @@
     
     <table id="id"></table>
 
-        <!--JavaScript-->
-        <script>
-            let dataVisible = false;  // Track whether the table is shown
-        
-            function loadXMLDoc() {
-                if (!dataVisible) {
-                    // If data not visible, fetch and show the table
-                    let xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function () {
-        
-                        // Request finished and response is ready and status is OK
-                        if (this.readyState == 4 && this.status == 200) {
-                            empDetails(this);
-                        }
-                    };
-        
-                    // employee.xml is the external xml file
-                    xmlhttp.open("GET", "employee.xml", true);
-                    xmlhttp.send();
-                } else {
-                    // If table is visible, clear it
-                    document.getElementById("id").innerHTML = "";
-                    document.querySelector(".button").innerText = "Get Employees Details";
-                    dataVisible = false;
-                }
-            }
-        
-            function empDetails(xml) {
-                let i;
-                let xmlDoc = xml.responseXML;
-                let table =
-                    `<tr><th>Firstname</th><th>Lastname</th>
-                        <th>Title</th><th>Division</th>
-                        <th>Building</th><th>Room</th>
-                    </tr>`;
-                let x = xmlDoc.getElementsByTagName("employee");
-        
-                // Start to fetch the data by using TagName 
-                for (i = 0; i < x.length; i++) {
-                    table += "<tr><td>" +
-                        x[i].getElementsByTagName("firstname")[0]
-                            .childNodes[0].nodeValue + "</td><td>" +
-                        x[i].getElementsByTagName("lastname")[0]
-                            .childNodes[0].nodeValue + "</td><td>" +
-                        x[i].getElementsByTagName("title")[0]
-                            .childNodes[0].nodeValue + "</td><td>" +
-                        x[i].getElementsByTagName("division")[0]
-                            .childNodes[0].nodeValue + "</td><td>" +
-                        x[i].getElementsByTagName("building")[0]
-                            .childNodes[0].nodeValue + "</td><td>" +
-                        x[i].getElementsByTagName("room")[0]
-                            .childNodes[0].nodeValue + "</td></tr>";
-                }
-        
-                // Print the xml data in table form
-                document.getElementById("id").innerHTML = table;
-        
-                // Update button text
-                document.querySelector(".button").innerText = "Close Employees Details";
-        
-                // Update toggle state
+    <script>
+        let dataVisible = false;
+    
+        const xmlString = `
+        <employees>
+            <employee id="be129"><firstname>Jitendra</firstname><lastname>Kumar</lastname><title>Engineer</title><division>Materials</division><building>327</building><room>19</room></employee>
+            <employee id="be130"><firstname>Amit</firstname><lastname>Kumar</lastname><title>Accountant</title><division>Accts Payable</division><building>326</building><room>14</room></employee>
+            <employee id="be131"><firstname>Akash</firstname><lastname>Kumar</lastname><title>Engineering Manager</title><division>Materials</division><building>327</building><room>21</room></employee>
+            <employee id="be138"><firstname>John</firstname><lastname>Smith</lastname><title>Engineer</title><division>Materials</division><building>327</building><room>28</room></employee>
+            <employee id="be139"><firstname>Emily</firstname><lastname>Cho</lastname><title>Accountant</title><division>Accts Payable</division><building>326</building><room>31</room></employee>
+            <employee id="be140"><firstname>Micheal</firstname><lastname>Lee</lastname><title>Accountant</title><division>Accts Payable</division><building>326</building><room>18</room></employee>
+            <employee id="be141"><firstname>Sarah</firstname><lastname>Ahn</lastname><title>Engineer</title><division>Materials</division><building>327</building><room>15</room></employee>
+            <employee id="be142"><firstname>David</firstname><lastname>Shin</lastname><title>Engineer</title><division>Materials</division><building>327</building><room>17</room></employee>
+            <employee id="be143"><firstname>Jessica</firstname><lastname>Kim</lastname><title>Accountant</title><division>Accts Payable</division><building>326</building><room>20</room></employee>
+        </employees>`;
+    
+        function loadXMLDoc() {
+            const button = document.querySelector(".button");
+            const table = document.getElementById("id");
+    
+            if (!dataVisible) {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+                empDetails(xmlDoc);
+    
+                table.classList.add("show");
+                button.innerText = "Close Employee Data";
                 dataVisible = true;
+            } else {
+                table.classList.remove("show");
+                button.innerText = "Get Employee Data";
+                dataVisible = false;
             }
-        </script>
+        }
+    
+        function empDetails(xmlDoc) {
+            let tableContent = `
+                <tr><th>Firstname</th><th>Lastname</th><th>Title</th><th>Division</th><th>Building</th><th>Room</th></tr>
+            `;
+            const employees = xmlDoc.getElementsByTagName("employee");
+    
+            for (let i = 0; i < employees.length; i++) {
+                tableContent += "<tr><td>" +
+                    employees[i].getElementsByTagName("firstname")[0].childNodes[0].nodeValue + "</td><td>" +
+                    employees[i].getElementsByTagName("lastname")[0].childNodes[0].nodeValue + "</td><td>" +
+                    employees[i].getElementsByTagName("title")[0].childNodes[0].nodeValue + "</td><td>" +
+                    employees[i].getElementsByTagName("division")[0].childNodes[0].nodeValue + "</td><td>" +
+                    employees[i].getElementsByTagName("building")[0].childNodes[0].nodeValue + "</td><td>" +
+                    employees[i].getElementsByTagName("room")[0].childNodes[0].nodeValue + "</td></tr>";
+            }
+    
+            document.getElementById("id").innerHTML = tableContent;
+        }
+    </script>
+    
         
 </body>
 
