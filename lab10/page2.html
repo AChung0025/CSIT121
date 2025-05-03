@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>LAB 10</title>  
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header>
+      <div class="hero-image">
+        <!--HERO IMAGE-->
+      </div>
+    </header>
+<br>
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; OPEN</span>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">What is it?</a>
+          <a href="page2.html">Why is it important?</a>
+          <a href="page3.html">How is it used?</a>
+          <a href="page4.html">Web Standards Resources</a>
+      </div>
+
+      <div>
+        <h1>Web Share API</h1>
+        <h3>Why is it important?</h3>
+        <p>
+          Web Share API is a useful tool that allows users to effortlessly access and share 
+          content creations, files, and other resources. This is by launching the operating 
+          system's native sharing dialog. It creates a familiar appearance and feel, similar 
+          to other devices and platforms, while sharing, making it simple to utilize. It 
+          allows you to confirm with whom and what you're sharing. The share option is 
+          presented inside the context and is easily accessible, making it more efficient 
+          for users by eliminating the need for them to hunt for it. 
+          <a href="https://www.w3.org/TR/web-share/#implementation-status">
+          Web Share API - W3C Recommendation </a>
+        </p>
+      </div>
+
+  <footer id="footer">
+    <p class="footer-text">&copy; 2025 Student in CSIT 121</p>
+  </footer>
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+  </div>  
+
+</body>
+</html> 
+
+
+

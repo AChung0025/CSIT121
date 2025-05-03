@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>LAB 10</title>  
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header>
+      <div class="hero-image">
+        <!--HERO IMAGE-->
+      </div>
+    </header>
+<br>
+    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; OPEN</span>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="index.html">What is it?</a>
+          <a href="page2.html">Why is it important?</a>
+          <a href="page3.html">How is it used?</a>
+          <a href="page4.html">Web Standards Resources</a>
+      </div>
+
+      <div>
+        <h1>Web Share API</h1>
+        <h3>How is it used?</h3>
+        <p>
+          The Web Share API is generally used with the navigator.share() method, 
+          and to determine whether the API is supported, use navigator.canShare(). 
+          There is a feature called "web-share" that inhibits unwanted sharing initiation. 
+          The share feature is usually associated with a button element.
+          <a href="https://www.w3.org/TR/web-share/#implementation-status">Web Share API - W3C Recommendation.</a>
+        </p>
+      </div>
+      <div>
+        <p>Here is an example how it is written with JS</p>
+          <pre>
+            <code>
+              if (navigator.share)
+                document.getElementById('share').addEventListener('click', () 
+                => navigator.share({ title: 'Check this!', url: location.href }));
+              else
+                document.getElementById('share').style.display = 'none';
+            </code>
+          </pre>
+      </div>
+
+  <footer id="footer">
+    <p class="footer-text">&copy; 2025 Student in CSIT 121</p>
+  </footer>
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+  </div>  
+
+</body>
+</html> 
+
