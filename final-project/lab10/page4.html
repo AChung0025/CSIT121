@@ -5,7 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
-    <title>LAB 10</title>  
+    <title>LAB 10</title>
+        <style>
+        .wrapper {
+            max-width: 1000px;
+            margin: auto; /* This centers the wrapper horizontally */
+            padding: 1rem;
+        }
+                /* Side Navigation */
+        .sidenav {
+            height: 100%;
+            width: 0; 
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav.open {
+            width: 250px; 
+        }
+
+        .sidenav li {
+            list-style-type: none;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #dd70e3;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .open-menu-text {
+            color: #771ab1;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed; 
+            top: 10px;      
+            left: 10px;    
+            z-index: 2;      
+            background-color: white; 
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        body {
+            transition: padding-left .5s; 
+        }
+
+        body.sidenav-open {
+            padding-left: 250px;
+        }
+    </style>  
 </head>
 
 <body>
@@ -24,6 +94,17 @@
           <a href="page2.html">Why is it important?</a>
           <a href="page3.html">How is it used?</a>
           <a href="page4.html">Web Standards Resources</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project">Final Project Home</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project/lab01/aboutme.html">lab01</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project/lab02/index.html">lab02</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project/lab03/index.html">lab03</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project/lab04/index.html">lab04</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project/lab05/index.html">lab05</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project/lab06/index.html">lab06</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project/lab07/index.html">lab07</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project/lab08/lab08index.html">lab08</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project/lab09/index.html">lab09</a>
+          <a href="https://achung0025.github.io/CSIT121/final-project/lab10/index.html">lab10</a>
       </div>
 
       <div>
@@ -55,18 +136,17 @@
   <footer id="footer">
     <p class="footer-text">&copy; 2025 Student in CSIT 121</p>
   </footer>
+</div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.classList.add("sidenav-open");
+        }
 
-  <script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
-  </script>
-
-  </div>  
-
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.classList.remove("sidenav-open");
+        }
+    </script>
 </body>
 </html> 
