@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <title>PNG</title>
+        <style>
+        .wrapper {
+            max-width: 1000px;
+            margin: auto; /* This centers the wrapper horizontally */
+            padding: 1rem;
+        }
+                /* Side Navigation */
+        .sidenav {
+            height: 100%;
+            width: 0; 
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav.open {
+            width: 250px; 
+        }
+
+        .sidenav li {
+            list-style-type: none;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #dd70e3;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .open-menu-text {
+            color: #771ab1;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed; 
+            top: 10px;      
+            left: 10px;    
+            z-index: 2;      
+            background-color: white; 
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        body {
+            transition: padding-left .5s; 
+        }
+
+        body.sidenav-open {
+            padding-left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="open-menu-text" onclick="openNav()">&#9776; OPEN</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="page1gif.html" class="gif-link">GIF (Graphics Interchange Format)</a>
+        <a href="page2jpg-jpeg.html" class="jpg-link">JPG (Joint Photographic Experts Group)</a>
+        <a href="page3png.html" class="png-link">PNG (Portable Network Graphics)</a>
+        <a href="index.html">Home</a>
+        <a href="lab01/aboutme.html">lab01</a>
+        <a href="lab02/index.html">lab02</a>
+        <a href="lab03/index.html">lab03</a>
+        <a href="lab04/index.html">lab04</a>
+        <a href="lab05/index.html">lab05</a>
+        <a href="lab06/index.html">lab06</a>
+        <a href="lab07/index.html">lab07</a>
+        <a href="lab08/index.html">lab08</a>
+        <a href="lab09/index.html">lab09</a>
+        <a href="lab10/index.html">lab10</a>
+    </div>
+<div class="wrapper">
+    <header>
+          <h1>About PNG Images</h1>
+    </header>
+    <div class="grid-container">
+        <div>
+            <article>
+                <header>
+                    <h2>PNG</h2>
+                </header>              
+                    <p>GIF stands for Portable Network Graphics<br>
+                        This image format supports millions of colors with the ability to have multiple layers 
+                        and semi/transparent backgrounds. They are most used when making logos. <a href="https://www.adobe.com/creativecloud/file-types/image/comparison/jpeg-vs-png.html#:~:text=In%20contrast%2C%20PNG%20files%20benefit,graphs%20containing%20lots%20of%20figures.">
+                        PNG images are lossless compression files, no data is lost when the image is edited and saved.</a> I use this PNG image of the 
+                        Instagram logo since this is the app I use the most, and as shown, rescaling and exporting 
+                        did not affect the quality.<br>
+                        <em>Source: <a href="https://www.adobe.com/creativecloud/file-types/image/comparison/jpeg-vs-png.html#:~:text=In%20contrast%2C%20PNG%20files%20benefit,graphs%20containing%20lots%20of%20figures.">Adobe</a></em>
+                        <em>Source: <a href="https://commons.wikimedia.org/wiki/File:Instagram-Icon.png">Wikimedia</a></em>
+                    </p>
+            </article>
+        </div>
+
+        <div>
+            <img src="Instagram-Icon.png" alt="Instagram Logo PNG" class="page-image" width="200">
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <p class="footer-text">&copy; 2025 Student in CSIT 121</p>
+</footer>
+
+<script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.classList.add("sidenav-open");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.classList.remove("sidenav-open");
+        }
+    </script>  
+</body>
+</html>

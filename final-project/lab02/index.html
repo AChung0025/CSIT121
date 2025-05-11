@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Learning Web Standards</title>
+    <style>
+        .wrapper {
+            max-width: 1000px;
+            margin: auto; /* This centers the wrapper horizontally */
+            padding: 1rem;
+        }
+                /* Side Navigation */
+        .sidenav {
+            height: 100%;
+            width: 0; 
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav.open {
+            width: 250px; 
+        }
+
+        .sidenav li {
+            list-style-type: none;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #dd70e3;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .open-menu-text {
+            color: #771ab1;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed; 
+            top: 10px;      
+            left: 10px;    
+            z-index: 2;      
+            background-color: white; 
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        body {
+            transition: padding-left .5s; 
+        }
+
+        body.sidenav-open {
+            padding-left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="open-menu-text" onclick="openNav()">&#9776; OPEN</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="lab01/aboutme.html">lab01</a>
+        <a href="lab02/index.html">lab02</a>
+        <a href="lab03/index.html">lab03</a>
+        <a href="lab04/index.html">lab04</a>
+        <a href="lab05/index.html">lab05</a>
+        <a href="lab06/index.html">lab06</a>
+        <a href="lab07/index.html">lab07</a>
+        <a href="lab08/index.html">lab08</a>
+        <a href="lab09/index.html">lab09</a>
+        <a href="lab10/index.html">lab10</a>
+    </div>
+    <div class="wrapper">
+    <header>
+        <h1>Learning Web Standards</h1>
+    </header>
+        <main>
+            <article>
+                <h2> Labs 1 & 2</h2>
+                <p><i>Published on February 9,2025 by Student, A.Chung</i></p>
+                    <p>During my lessons, I have learned the importance of Web Standards and HTML. Web standards are used to
+                     ensure better accessibility, performance, and security for end-users, this includes the use of HTML (HyperText Markup Language).
+                     HTML is used in creating websites by providing a standard structure, used worldwide. This 
+                     is helpful so that developers who want to create a website will follow the same standards, giving consistency.
+                    </p>
+                <h3>What I Learned about Web Standards:</h3>
+                    <ul>
+                        <li>Consistency</li>
+                        <li>Accessibility</li>
+                        <li>Performance</li>
+                        <li>Security</li>
+                    </ul>
+                <h3>What I Learned about HTML:</h3>
+                    <ul>
+                        <li>Provides a fundamental structure.</li>
+                        <li>Uses element tags to show how content is shown</li>
+                    </ul>
+                </article>
+            <h4>Resources:</h4>
+                <ol>
+                    <li>MDN - <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model">Web Standards</a></li>
+                    <li>W3 Schools - <a href="https://www.w3schools.com/html/html_intro.asp">HTML introduction</a></li>
+                </ol>
+        </main>
+    <footer>
+        <p><br>© 2025 Student in CSIT 121</p>
+    </footer>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.classList.add("sidenav-open");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.classList.remove("sidenav-open");
+        }
+    </script>
+</body>
+</html>

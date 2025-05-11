@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>JPEG</title>
+        <style>
+        .wrapper {
+            max-width: 1000px;
+            margin: auto; /* This centers the wrapper horizontally */
+            padding: 1rem;
+        }
+                /* Side Navigation */
+        .sidenav {
+            height: 100%;
+            width: 0; 
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav.open {
+            width: 250px; 
+        }
+
+        .sidenav li {
+            list-style-type: none;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #dd70e3;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .open-menu-text {
+            color: #771ab1;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed; 
+            top: 10px;      
+            left: 10px;    
+            z-index: 2;      
+            background-color: white; 
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        body {
+            transition: padding-left .5s; 
+        }
+
+        body.sidenav-open {
+            padding-left: 250px;
+        }
+    </style>   
+</head>
+
+<body class="pages123">
+        <span class="open-menu-text" onclick="openNav()">&#9776; OPEN</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="lab01/aboutme.html">lab01</a>
+        <a href="lab02/index.html">lab02</a>
+        <a href="lab03/index.html">lab03</a>
+        <a href="lab04/index.html">lab04</a>
+        <a href="lab05/index.html">lab05</a>
+        <a href="lab06/index.html">lab06</a>
+        <a href="lab07/index.html">lab07</a>
+        <a href="lab08/index.html">lab08</a>
+        <a href="lab09/index.html">lab09</a>
+        <a href="lab10/index.html">lab10</a>
+    </div>
+    <div class="wrapper">
+    <nav>             
+        <a class="index-link" href="index.html">HOME</a>
+        <a class="gif-link" href = page1gif.html>GIF</a>
+        <a class="jpglink" href = page2jpg-jpeg.html>JPG/JPEG</a>
+        <a class="pnglink" href = page3png.html>PNG</a>
+    </nav>
+    <div class="mycontainer123">
+        <div>
+            <article>
+            <header>
+                <h2>GIF</h2>
+            </header>               
+                    <p>GIF stands for Graphics Interchange Format<br>
+                        The file extension for a GIF is .gif, GIFs can be either still or animated graphics.  
+                        This image was shown to me in the <i>All About Standard Web Graphics</i> lesson. It is of a one eyed 
+                        orange monster bouncing up and down, while in the background, there is a color wheel spinning clockwise.
+                        I decided to use this image because it is a great example of what a GIF image looks like. 
+                        This displays the <a href="https://www.eminentseo.com/blog/gif-images-clever-tools-marketing/">perfect-loop GIF</a>
+                        , where the animation at the start is perfectly synced with the ending to make it appear as if it is constant. 
+                        GIFs are great for expressing reactions and are used for marketing and visual cinemographs.
+                    </p>
+            </article>
+            <em>Source: <a href="https://www.eminentseo.com/blog/gif-images-clever-tools-marketing/">eminentseo.com</a></em>
+        </div>
+        <div>
+            <img src="images/max-monster.gif" alt="monster-gif" class="imgp3">
+        </div>
+    </div>
+    
+    <footer id="footer">
+        <p><br>© 2025 Student in CSIT 121</p>
+    </footer>    
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.classList.add("sidenav-open");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.classList.remove("sidenav-open");
+        }
+    </script>
+</body>
+
+</html>

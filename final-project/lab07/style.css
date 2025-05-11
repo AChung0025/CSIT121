@@ -1,0 +1,165 @@
+body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #171abd3a;
+}
+/*Hero Image*/
+.hero-image {
+    /*linear-gradient to add a darken background effect to the image, making text easier to read*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0.253)), url(Screenshot.png);
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.hero-image1 {
+    /*linear-gradient to add a darken background effect to the image, making text easier to read*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0.719)), url(spiderman.jpg);
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-image2 {
+    /*linear-gradient to add a darken background effect to the image, making text easier to read*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0.253)), url(form.png);
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    position: relative;
+}
+
+h1 {
+    padding: 70px;   
+    text-align: center;
+    color: #ffffff;
+}
+
+h3 {
+    padding-left: 25px;
+    text-align: center;
+}
+/* Navbar styles */
+.navbar {
+    background-color: #171abd8a;
+    overflow: hidden;
+    list-style: none;
+    display: flex; /* this makes the <li>s go side-by-side */
+}
+  
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #1916d6bd;
+}
+
+.navbar a.active {
+    background-color: #d6168cbd;
+}
+
+/* Navbar style end*/
+p {
+    text-align: center;
+    font-size: 16px;
+    padding-left: 25px;
+}
+
+.caption p {
+    text-align: center;
+}
+
+hr {
+    border-color: #dddddd;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+}
+.schedule-table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 25px;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 15);
+    margin-bottom: 0%;
+}
+
+.schedule-table thead tr {
+    background-color: #3a3737;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.schedule-table td.tier {
+    background-color: #3a3737;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 12px 15px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.schedule-table tbody td:hover {
+    transform: scale(1.1);
+}
+
+.schedule-table tbody tr.tier-s {
+    background-color: #f57070;
+}
+
+.schedule-table tbody tr.tier-a {
+    background-color: #dbb367;
+}
+
+.schedule-table tbody tr.tier-b {
+    background-color: #e2e268;
+}
+
+.schedule-table tbody tr.tier-c {
+    background-color: #66d166;
+}
+
+.schedule-table tbody tr.tier-d {
+    background-color: #5c5cf7;
+}
+
+.schedule-table tbody tr.tier-f {
+    background-color: #d85bd8;
+}
+
+.schedule-table tbody tr.tier-s {
+    background-color: #f57070;
+}
+
+.contactform td {
+    padding: 10px;
+}
+
+/*font-size will reduce as window size reduces*/
+@media screen and (max-width: 800px) {
+    p { font-size: 2vw;}
+  }
+  

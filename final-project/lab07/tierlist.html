@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Table and Form Practice</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+                    .wrapper {
+            max-width: 1000px;
+            margin: auto; /* This centers the wrapper horizontally */
+            padding: 1rem;
+        }
+                /* Side Navigation */
+        .sidenav {
+            height: 100%;
+            width: 0; 
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav.open {
+            width: 250px; 
+        }
+
+        .sidenav li {
+            list-style-type: none;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #dd70e3;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .open-menu-text {
+            color: #771ab1;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed; 
+            top: 10px;      
+            left: 10px;    
+            z-index: 2;      
+            background-color: white; 
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        body {
+            transition: padding-left .5s; 
+        }
+
+        body.sidenav-open {
+            padding-left: 250px;
+        }
+        </style>
+    </head>
+
+    <body>
+    <span class="open-menu-text" onclick="openNav()">&#9776; OPEN</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="lab01/aboutme.html">lab01</a>
+        <a href="lab02/index.html">lab02</a>
+        <a href="lab03/index.html">lab03</a>
+        <a href="lab04/index.html">lab04</a>
+        <a href="lab05/index.html">lab05</a>
+        <a href="lab06/index.html">lab06</a>
+        <a href="lab07/index.html">lab07</a>
+        <a href="lab08/index.html">lab08</a>
+        <a href="lab09/index.html">lab09</a>
+        <a href="lab10/index.html">lab10</a>
+    </div>
+    <div class="wrapper">
+        <div class="hero-image1">
+            <div class="hero-text1">
+                <h1>MCOC Tier List</h1>
+            </div>
+        </div>
+        
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tierlist.html">Tier List</a></li>
+                <li><a href="contactform.html">Contact Form</a></li>
+            </ul>
+        </nav>
+
+        <div>
+            <table class="schedule-table">
+                <caption>MCOC (Marvel Contest of Champions) Champions Ranking</caption>
+                <thead><!-- thead = used to group header rows -->
+                    <tr>
+                        <th>Tier</th>
+                        <th>Cosmic</th>
+                        <th>Mutant</th>
+                        <th>Mystic</th>
+                        <th>Science</th>
+                        <th>Skill</th>
+                        <th>Tech</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tier-s">
+                        <td class="tier"><abbr title="Top Tier">S</abbr></td>
+                        <td>Captain Marvel</td>
+                        <td>Archangel</td>
+                        <td><img src="doomrs.jpg" alt="Doctor Doom"><br>Doctor Doom</td>
+                        <td>Void</td>
+                        <td>Nick Fury</td>
+                        <td>Warlock</td>
+                    </tr>
+                    <tr class="tier-a">
+                        <td class="tier"><abbr title="High Tier">A</abbr></td>
+                        <td>Venom the Duck</td>
+                        <td>Domino</td>
+                        <td>Magik</td>
+                        <td>Captain America (IW)</td>
+                        <td>Blade</td>
+                        <td>Guillotine 2099</td>
+                    </tr>
+                    <tr class="tier-b">
+                        <td class="tier"><abbr title="Above Average Tier">B</abbr></td>
+                        <td>Cosmic Ghost Rider</td>
+                        <td>Colossus</td>
+                        <td>Scarlet Witch</td>
+                        <td>Quake</td>
+                        <td>Black Widow (Movie)</td>
+                        <td>Doctor Octopus</td>
+                    </tr>
+                    <tr class="tier-c">
+                        <td class="tier"><abbr title="Average Tier">C</abbr></td>
+                        <td>Hyperion</td>
+                        <td>Emma Frost</td>
+                        <td>Ghost Rider</td>
+                        <td><img src="redhulkrs.jpg" alt="Red Hulk"><br>Red Hulk</td>
+                        <td>Killmonger</td>
+                        <td>Starlord</td>
+                    </tr>
+                    <tr class="tier-d">
+                        <td class="tier"><abbr title="Below Average Tier">D</abbr></td>
+                        <td>Venom</td>
+                        <td>Magneto</td>
+                        <td>Guillotine</td>
+                        <td>Wasp</td>
+                        <td>Gwenpool</td>
+                        <td>Nebula</td>
+                    </tr>
+                    <tr class="tier-f">
+                        <td class="tier"><abbr title="Lowest Tier">F</abbr></td>
+                        <td>Groot</td>
+                        <td>Cyclops</td>
+                        <td>Unstoppable Colossus</td>
+                        <td>Joe Fixit</td>
+                        <td>Moon Knight</td>
+                        <td>War Machine</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <p>For context, I haven't played MCOC mobile game in about 2 years so this list is out of date.</p>
+        </div>
+
+        <footer class="footer">
+            <p><br>© 2025 Student in CSIT 121</p>
+        </footer>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.classList.add("sidenav-open");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.classList.remove("sidenav-open");
+        }
+    </script>
+    </body>
+</html>
+
+
+
+
+
+

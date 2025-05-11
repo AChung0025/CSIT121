@@ -1,0 +1,148 @@
+body {
+  font-family: "Lato", sans-serif;
+  background: linear-gradient( #9198e5,#183efc,#1430be,#183efc, #9198e5);
+  color: #ffffff;
+  font-size: 22px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 
+  0px 0px 10px #00b7ff,
+  0px 0px 10px #00b7ff,
+  0px 0px 10px #00b7ff,
+  0px 0px 10px #00b7ff;
+  margin-bottom: 0;
+  font-variant: small-caps;
+}
+
+h3, h4, h5 {
+  margin-bottom: 0;
+  font-variant: small-caps;
+  color: #ffffff;
+  text-shadow: 
+  0px 0px 10px #dd70e3,
+  0px 0px 10px #dd70e3,
+  0px 0px 10px #dd70e3,
+  0px 0px 10px #dd70e3;
+}
+
+h4 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  max-inline-size: 1000px;
+  margin-inline: auto;
+}
+
+a {
+  text-decoration: none;
+  color: cyan;
+}
+
+a:hover {
+  color: #ffffff;
+  text-shadow: 
+  0px 0px 10px #dd70e3,
+  0px 0px 10px #dd70e3,
+  0px 0px 10px #dd70e3,
+  0px 0px 10px #dd70e3;
+}
+
+ul li,
+li a {
+  list-style: none;
+  color: #000000;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #ffffff;
+  text-shadow: 
+  0px 0px 10px #00b7ff,
+  0px 0px 10px #00b7ff,
+  0px 0px 10px #00b7ff,
+  0px 0px 10px #00b7ff;
+}
+
+/*Hero Image*/
+.hero-image {
+  /*linear-gradient to add a darken background effect to the image, making text easier to read*/
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0.253)), url(web-share-services.png);*/
+  background-image: url(web-share-services.png);
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 5.5em;
+  border-radius: 15px 15px 15px 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 15);
+}
+
+/*sidenav*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav li {
+  list-style-type: none;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #ffffff;
+  text-shadow: 
+  0px 0px 10px #dd70e3,
+  0px 0px 10px #dd70e3,
+  0px 0px 10px #dd70e3,
+  0px 0px 10px #dd70e3;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/*font-size will reduce as window size reduces*/
+@media screen and (max-width: 800px) {
+  p { font-size: 2vw;}
+  pre { font-size: 2vw;}
+}

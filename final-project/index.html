@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Final Project</title>
+</head>
+<body>
+    <span class="open-menu-text" onclick="openNav()">&#9776; OPEN</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="lab01/aboutme.html">lab01</a>
+        <a href="lab02/index.html">lab02</a>
+        <a href="lab03/index.html">lab03</a>
+        <a href="lab04/index.html">lab04</a>
+        <a href="lab05/index.html">lab05</a>
+        <a href="lab06/index.html">lab06</a>
+        <a href="lab07/index.html">lab07</a>
+        <a href="lab08/index.html">lab08</a>
+        <a href="lab09/index.html">lab09</a>
+        <a href="lab10/index.html">lab10</a>
+    </div>
+    <div class="wrapper">
+        <br>
+        <header class="hero">
+            <img src="HIMG.jpg" alt="Hero Image">
+            <div class="blur-overlay"></div>
+            <div class="hero-text">
+                <h1>FINAL PROJECT</h1>
+            </div>
+        </header>
+        <div class="grid">
+            <article>
+                <h2>Final Reflection</h2>
+                <div class="columns">
+                    <div class="column">
+                        <div class="row">
+                            <div>While working on this project, I’ve noticed a significant improvement
+                                in my understanding of HTML and CSS. However, I still struggle with
+                                JavaScript. It’s been exciting to finally grasp how these languages work—it
+                                almost feels like I’ve learned a new language I can now write and read. For
+                                this project, I focused on the visual design and how to communicate my ideas
+                                through appearance, applying what I’ve learned in class.</div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="row">
+                            <div>Looking back at my earlier labs, it’s clear I didn’t fully understand how
+                                to structure or position elements correctly. Through this course, I’ve learned
+                                how to customize elements to achieve the look I want. While I still need more
+                                practice, I’m confident I’ll get there. I’ve left my labs unchanged to highlight
+                                my progress—the early ones lack responsive design, while the later ones show clear
+                                improvement.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="row">
+                            <div>This journey hasn’t been easy, but I now have a stronger grasp of what goes on
+                                behind the scenes in both front-end and back-end web development. I’ve also learned
+                                about various web standards and how to apply them in my work. JavaScript has been my
+                                biggest challenge. Even though its syntax resembles other programming languages,
+                                I still find it confusing. I’ve been trying different approaches to understand it
+                                better and hope to improve with continued practice.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div>After incorporating HTML elements, style, and JS into my previous labs to add the side-nav bar, 
+            I ran into a hiccup. The previous links for the original menu are not showing. This is where my 
+            weakness shows. I have tried to fix it, but I am taken aback. Though I could not fix my errors for 
+            this, and it will affect my grade, sadly, I could not finish in time, I will figure it out.</div>
+        <div>
+            <table>
+                <tr>
+                    <th>LABS</th>
+                    <th>PREVIEW</th>
+                </tr>
+                <tr>
+                    <td><a href="lab01/aboutme.html">LAB 01</a></td>
+                    <td><img src="lab01.png" alt="Lab 01 Preview"></td>
+                </tr>
+                <tr>
+                    <td><a href="lab02/lab02-index.html">LAB 02</a></td>
+                    <td><img src="lab02.png" alt="Lab 02 Preview"></td>
+                </tr>
+                <tr>
+                    <td><a href="lab03/index.html">LAB 03</a></td>
+                    <td><img src="lab03.png" alt="Lab 03 Preview"></td>
+                </tr>
+                <tr>
+                    <td><a href="lab04/index.html">LAB 04</a></td>
+                    <td><img src="lab04.png" alt="Lab 04 Preview"></td>
+                </tr>
+                <tr>
+                    <td><a href="lab05/index.html">LAB 05</a></td>
+                    <td><img src="lab05.png" alt="Lab 05 Preview"></td>
+                </tr>
+                <tr>
+                    <td><a href="lab06/index.html">LAB 06</a></td>
+                    <td><img src="lab06.png" alt="Lab 06 Preview"></td>
+                </tr>
+                <tr>
+                    <td><a href="lab07/index.html">LAB 07</a></td>
+                    <td><img src="lab07.png" alt="Lab 07 Preview"></td>
+                </tr>
+                <tr>
+                    <td><a href="lab08/index.html">LAB 08</a></td>
+                    <td><img src="lab08.png" alt="Lab 08 Preview"></td>
+                </tr>
+                <tr>
+                    <td><a href="lab09/index.html">LAB 09</a></td>
+                    <td><img src="lab09.png" alt="Lab 09 Preview"></td>
+                </tr>
+                <tr>
+                    <td><a href="lab10/index.html">LAB 10</a></td>
+                    <td><img src="lab10.png" alt="Lab 10 Preview"></td>
+                </tr>
+            </table>
+        </div>
+        <footer id="footer">
+            <p class="footer-text">&copy; 2025 Student in CSIT 121</p>
+        </footer>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.classList.add("sidenav-open");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.classList.remove("sidenav-open");
+        }
+    </script>
+</body>
+</html>

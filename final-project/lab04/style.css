@@ -1,0 +1,55 @@
+body#index {background-color: black;
+            color: white;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-image: url(images/stillmax-monster.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+
+h1#h1index {text-align: center;
+            font-variant: small-caps;
+            font-size: 75px;
+            }
+
+a.p0 {text-decoration: none;}
+
+a.p0:visited {color:black;}
+
+#footer {display: block;
+        position: fixed;
+        bottom: 2px;
+        }
+
+body.pages123 { background-color: black;
+                color: white;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: x-large;
+              }
+/*This is for the two */
+div.mycontainer123 div { 
+  width: 50%; 
+  float:left;
+  text-align: center;
+  padding-top: 5%;
+}
+
+/*---This is for the navigation menu---*/
+div.menulist0 div { 
+  width: 50%; 
+  float:left;
+  text-align: left;
+  font-size: xx-large;
+}
+/*Alignment and text-color*/
+a.index-link { text-decoration: none; text-align: left; color:white;}
+
+a.gif-link { text-decoration: none; text-align: left; color:rgb(140, 0, 255);}
+
+a.jpglink { text-decoration: none; text-align: left; color: rgb(66, 103, 207);}
+
+a.pnglink { text-decoration: none; text-align: left; color: rgb(89, 212, 202);}
+
+img.imgp3 {padding-top: 20px;}
+
+
+p.footerp {font-size: xx-large;}

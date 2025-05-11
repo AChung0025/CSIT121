@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Interface & Usability</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+        
+        /* General settings */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+ /* Wrapper for layout */
+ .wrapper {
+     display: flex;
+     flex-flow: row wrap;
+ }
+ 
+ /* Default flex settings for small screens */
+ .wrapper > * {
+     padding: 10px;
+     flex: 1 100%;
+ }
+ 
+ /* Body styling with background image */
+ body {
+     background-color: grey;
+     padding-top: 5%;
+     padding-bottom: 5%;
+     padding-left: 10%;
+     padding-right: 10%;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+ /* Header section */
+ .header {
+     background-color: #faa563;
+     text-align: left;
+ }
+ 
+ /* Main article */
+ .main {
+     text-align: center;
+     background: white;
+ }
+ 
+ h1 {
+    text-align: center;
+    background: black;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+ }
+
+ .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.evaluation, .image {
+    width: 48%;
+}
+
+.main p {
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+hr { border-style: hidden;
+     margin-top: 30px;
+}
+
+ /* Aside section sidebar */
+ .aside-1 {
+     background: black;
+     text-align: center;
+     color: white;
+ }
+ 
+ /* List style in aside */
+ .aside-1 ul {
+     list-style-type: none;
+ }
+
+ .recommendation {
+     background: #634081;
+     color: white;
+ }
+ 
+ /* Remove bullet points from ordered list in resources */
+ .recommendation ol {
+     list-style: none;
+ }
+ 
+ /* Resources section */
+ .resources {
+     background: white;
+ }
+ 
+ /* Remove bullet points from ordered list in resources */
+ .resources ol {
+     list-style: none;
+ }
+ 
+ /* Hover effect for resource links */
+ .resources a:hover {
+     color: #faa563;
+ }
+
+         .wrapper {
+            max-width: 1000px;
+            margin: auto; /* This centers the wrapper horizontally */
+            padding: 1rem;
+        }
+                /* Side Navigation */
+        .sidenav {
+            height: 100%;
+            width: 0; 
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav.open {
+            width: 250px; 
+        }
+
+        .sidenav li {
+            list-style-type: none;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #dd70e3;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .open-menu-text {
+            color: #771ab1;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed; 
+            top: 10px;      
+            left: 10px;    
+            z-index: 2;      
+            background-color: white; 
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        body {
+            transition: padding-left .5s; 
+        }
+
+        body.sidenav-open {
+            padding-left: 250px;
+        }
+ 
+ /* Footer */
+ .footer {
+     text-align: center;
+ }
+ 
+ /* Media queries for responsive design */
+ 
+ /* Small screens (min-width: 600px) */
+ @media all and (min-width: 600px) {
+     .aside-1 {
+         flex: 1 0 0;
+     }
+ 
+ }
+ 
+ /* Larger screens (min-width: 800px) */
+ @media all and (min-width: 800px) {
+     .main {
+         flex: 3 0px;
+     }
+ 
+     .aside-1 {
+         order: 1;
+     }
+ 
+     .main {
+         order: 2;
+     }
+
+     .recommendation {
+         order: 3;
+     }
+
+     .resources {
+         order: 4;
+     }
+ 
+     .footer {
+         order: 5;
+     }
+
+ }
+   
+    </style>
+</head>
+
+<body>
+    <span class="open-menu-text" onclick="openNav()">&#9776; OPEN</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="lab01/aboutme.html">lab01</a>
+        <a href="lab02/index.html">lab02</a>
+        <a href="lab03/index.html">lab03</a>
+        <a href="lab04/index.html">lab04</a>
+        <a href="lab05/index.html">lab05</a>
+        <a href="lab06/index.html">lab06</a>
+        <a href="lab07/index.html">lab07</a>
+        <a href="lab08/index.html">lab08</a>
+        <a href="lab09/index.html">lab09</a>
+        <a href="lab10/index.html">lab10</a>
+    </div>
+    <div class="wrapper">
+    <h1>User Interface & Usability</h1>
+    <main>
+        <div class="wrapper">
+            <header class="header">
+                <h2>LAB 06</h2>
+                <p class="pub"><i>Published on March 30, 2025 by Student, A.Chung</i></p>
+            </header>
+            <article class="main">
+                <div class="container">
+                    <div class="image">
+                        <img src="mdspca.png" width="225" height="150" alt="Image of MD SPCA homepage">
+                    </div>
+                    <div class="Evaluation">
+                        <h2>Site Evaluation</h2>
+                            <p>
+                            Website Name: Maryland SPCA <br>
+                            URL: <a href="https://www.mdspca.org/">https://www.mdspca.org/</a><br>
+                            <small><em>The Maryland SPCA aims to find people who want to adopt pets and encourage donations to support animals in need.</em></small><br>
+                            </p>
+                    </div>
+                </div>
+                <h3>First Impression</h3>
+                <p>
+                Overall, the website is visually appealing and features numerous interactive elements. It offers information on who to contact, what resources 
+                are available, and where to get involved to support the cause. The events section highlights ways to engage and contribute to helping the 
+                animals and the organization. Additionally, the statistics displayed at the top of the page showcase the positive impact they have made in 
+                improving the lives of pets in need.</p>
+                <br>
+                <hr>
+                <h3>Results</h3>
+                <p>
+                After reviewing the website and analyzing the results from the <a href="https://www.accessibilitychecker.org/">Accessibility Checker</a>, 
+                it was found that the Maryland SPCA site is not compliant with United States law, scoring only 61%. Several elements may hinder accessibility 
+                for individuals who are blind, have low vision, are deafblind, or experience mobility challenges and color blindness. These failing elements 
+                can interfere with how assistive technologies interpret and relay information to users. Additionally, the site’s insufficient color contrast 
+                may make it difficult for individuals with color blindness to view content clearly.<br>
+                </p>
+            </article>
+
+            <aside class="aside-1">
+                <h3 class="list-titles">Accessibility Checker<br>Audit Score:</h3>
+                <ul>
+                    <li>61%</li>
+                </ul>
+                <br>
+                <h3 class="list-titles">Website Organization:</h3>
+                <ul>
+                    <li>Hierarchical</li>
+                </ul>
+                <br>
+                <h3 class="list-titles">CRAP Design Principle:</h3>
+                <ul>
+                    <li><s>Contrast</s></li>
+                    <li style="color: #faa563"><b>Repetition</b></li>
+                    <li style="color: rgb(171, 58, 185);"><small><i>Consistent color schemes are used throughout the site.</i></small></li>
+                    <li><s>Alignment</s>s></li>
+                    <li style="color: #faa563"><b>Proximity</b></li>
+                    <li style="color: rgb(171, 58, 185);"><small><i>Related content is grouped effectively which helps with readability and navigation.</i></small></li>
+                </ul>
+            </aside>
+            <section class="recommendation">
+                <h4>Recommendation to improve the website:</h4>
+                <ol>
+                    <li>Apply borders or more contrast to color to help define the different topics.</li>
+                    <li>Apply alternative text to buttons and images with links to be more accessible for those who rely on screen readers.</li>
+                </ol>
+            </section>
+            <section class="resources">
+                <h4>Resources:</h4>
+                <ol>
+                    <li><a href="https://www.accessibilitychecker.org/">Accessibility Checker</a></li>
+                    <li>MDN - <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model">Web Standards</a></li>
+                    <li>W3 Schools - <a href="https://www.w3schools.com/html/html_intro.asp">HTML introduction</a></li>
+                    <li>*CSS-Tricks - <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-examples">CSS Flexbox Layout Guide</a></li>
+                </ol>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p><br>© 2025 Student in CSIT 121</p>
+    </footer>
+</div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.classList.add("sidenav-open");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.classList.remove("sidenav-open");
+        }
+    </script>
+</body>
+
+</html>

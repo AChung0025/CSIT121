@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    background: linear-gradient(#ffffff, #ffffff, #ffffff, #771ab1, #661698, #3d0d5b);
+    color: #3d0d5b;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding-left: 0; 
+    transition: padding-left .5s; 
+}
+
+body.sidenav-open {
+    padding-left: 250px; 
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+}
+
+h1,
+h3,
+h4,
+h5 {
+    font-variant: small-caps;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    text-shadow:
+        0 0 10px #e00afc,
+        0 0 10px #e00afc,
+        0 0 10px #e00afc,
+        0 0 10px #e00afc;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+p {
+    text-align: center;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: cyan;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #dd70e3, 0 0 10px #dd70e3;
+}
+
+ul li,
+li a {
+    list-style: none;
+    color: #000000;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #dd70e3;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.blur-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.824), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+}
+
+/* Side Navigation */
+.sidenav {
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav.open {
+    width: 250px; 
+}
+
+.sidenav li {
+    list-style-type: none;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #dd70e3;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.open-menu-text {
+    color: #771ab1;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    position: fixed; 
+    top: 10px;      
+    left: 10px;    
+    z-index: 2;      
+    background-color: white; 
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Columns & Grid Layout */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.column {
+    flex: 1 1 300px;
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin: 2rem auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+table th {
+    background-color: #3a3737;
+    color: #ffffff;
+    padding: 12px;
+    font-weight: bold;
+}
+
+table td, th {
+    background-color: #3a3737;
+    color: #ffffff;
+    padding: 12px 15px;
+    border: 2px solid black;
+    text-align: center;
+    font-weight: bold;
+}
+
+table tbody td:hover {
+    transform: scale(1.1);
+    background-color: #dd70e3;
+}
+
+table img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #2a0244;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+        width: 100%;
+    }
+
+    table td {
+        border: none;
+        border-bottom: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    table img {
+        width: 100%;
+        height: auto;
+    }
+
+    .wrapper {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}

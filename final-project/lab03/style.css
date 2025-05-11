@@ -1,0 +1,41 @@
+hr {
+    border-color: black;
+    }
+    
+h1 {
+    text-align: center;
+    color: white;
+    background-color: rgb(8, 8, 8);
+    font-size: 200%;
+    font-variant: small-caps;
+    }
+
+body {
+    font-size: 100%;
+}
+
+h2 {
+    color: white;
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 50px;
+    }
+
+h3.list-titles {font-size: 50%;}
+
+section {font-size: 40%;}
+
+/*
+body {
+    100% of the browser's base font size, so in most cases this will render as 16 pixels
+    font-size: 100%;
+  }
+  h1 {
+    twice the size of the body, thus 32 pixels
+    font-size: 200%;
+  }
+  span.subheading {
+    half the size of the h1, thus 16 pixels to come back to the original size
+    font-size: 50%;
+  }
+*/ 

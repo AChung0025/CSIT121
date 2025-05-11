@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>JPEG</title> 
+    <style>
+        .wrapper {
+            max-width: 1000px;
+            margin: auto; /* This centers the wrapper horizontally */
+            padding: 1rem;
+        }
+                /* Side Navigation */
+        .sidenav {
+            height: 100%;
+            width: 0; 
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav.open {
+            width: 250px; 
+        }
+
+        .sidenav li {
+            list-style-type: none;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #dd70e3;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .open-menu-text {
+            color: #771ab1;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed; 
+            top: 10px;      
+            left: 10px;    
+            z-index: 2;      
+            background-color: white; 
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        body {
+            transition: padding-left .5s; 
+        }
+
+        body.sidenav-open {
+            padding-left: 250px;
+        }
+    </style>  
+</head>
+
+<body class="pages123">
+    <span class="open-menu-text" onclick="openNav()">&#9776; OPEN</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="lab01/aboutme.html">lab01</a>
+        <a href="lab02/index.html">lab02</a>
+        <a href="lab03/index.html">lab03</a>
+        <a href="lab04/index.html">lab04</a>
+        <a href="lab05/index.html">lab05</a>
+        <a href="lab06/index.html">lab06</a>
+        <a href="lab07/index.html">lab07</a>
+        <a href="lab08/index.html">lab08</a>
+        <a href="lab09/index.html">lab09</a>
+        <a href="lab10/index.html">lab10</a>
+    </div>
+    <div class="wrapper">
+    <nav>             
+        <a class="index-link" href="index.html">HOME</a>
+        <a class="gif-link" href = page1gif.html>GIF</a>
+        <a class="jpglink" href = page2jpg-jpeg.html>JPG/JPEG</a>
+        <a class="pnglink" href = page3png.html>PNG</a>
+    </nav>
+    <div class="mycontainer123">
+        <div>
+            <img src="images/mybaby.jpg" alt="The perfect Calico" class="imgp3" >
+        </div>
+        <div>
+            <article>
+            <header>
+                <h2>JPG/JPEG</h2>
+            </header>              
+                    <p>JPG/JPEG stands for Joint Photographic Experts Group<br>
+                        JPG/JPEG is commonly used for photographs because it can handle up to 16.7 million colors and is 
+                        supported in most browsers and editing software. After editing and saving, you may lose some data 
+                        due to lossy compression. This will reduce the quality of the photo.
+                        The file extension for a JPG image is .jpg. This photo is of an American Shorthair Calico with green eyes. 
+                        I love cats, so I used a picture of my cat here for this example. I have edited this photo many times, 
+                        and as you can see, the image has become a bit blurry.
+                    </p>
+                </article>
+        <em>Source: Own photo and <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image">MDN web docs</a></em>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p><br>© 2025 Student in CSIT 121</p>
+    </footer> 
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.classList.add("sidenav-open");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.classList.remove("sidenav-open");
+        }
+    </script>   
+</body>
+
+</html>

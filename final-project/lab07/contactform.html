@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact Form</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+                    .wrapper {
+            max-width: 1000px;
+            margin: auto; /* This centers the wrapper horizontally */
+            padding: 1rem;
+        }
+                /* Side Navigation */
+        .sidenav {
+            height: 100%;
+            width: 0; 
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav.open {
+            width: 250px; 
+        }
+
+        .sidenav li {
+            list-style-type: none;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #dd70e3;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .open-menu-text {
+            color: #771ab1;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+            position: fixed; 
+            top: 10px;      
+            left: 10px;    
+            z-index: 2;      
+            background-color: white; 
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        body {
+            transition: padding-left .5s; 
+        }
+
+        body.sidenav-open {
+            padding-left: 250px;
+        }
+        </style>
+    </head>
+
+    <body>
+    <span class="open-menu-text" onclick="openNav()">&#9776; OPEN</span>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="lab01/aboutme.html">lab01</a>
+        <a href="lab02/index.html">lab02</a>
+        <a href="lab03/index.html">lab03</a>
+        <a href="lab04/index.html">lab04</a>
+        <a href="lab05/index.html">lab05</a>
+        <a href="lab06/index.html">lab06</a>
+        <a href="lab07/index.html">lab07</a>
+        <a href="lab08/index.html">lab08</a>
+        <a href="lab09/index.html">lab09</a>
+        <a href="lab10/index.html">lab10</a>
+    </div>
+    <div class="wrapper">
+        <div class="hero-image2">
+            <div class="hero-text2">
+                <h1>Contact Form</h1>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tierlist.html">Tier List</a></li>
+                <li><a href="contactform.html">Contact Form</a></li>
+            </ul>
+        </nav>
+
+        <div class="form">
+            <form>
+                <table class="contactform">
+                    <tr>
+                        <td>First Name:</td>
+                        <td>
+                            <input type="text" id="firstname" name="firstname" placeholder="Your First Name Here" required>
+                        </td>
+                        <td>Have you played MCOC Before?</td>
+                        <td>
+                            <input type="radio" id="played_yes" name="played_mcoc" value="Yes">
+                            <label for="played_yes">Yes</label>
+                            <input type="radio" id="played_no" name="played_mcoc" value="No">
+                            <label for="played_no">No</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Last Name:</td>
+                        <td>
+                            <input type="text" id="lastname" name="lastname" placeholder="Your Last Name Here" required>
+                        </td>
+                        <td>
+                            <label for="ranking_agreement">Do you agree with the rankings?</label>
+                        </td>
+                        <td>
+                            <select name="ranking_agreement" id="ranking_agreement">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Email Address:</td>
+                        <td>
+                            <input type="email" id="email" name="email" placeholder="Enter email address">
+                        </td>
+                        <td>How would you rate the look of my tier list?</td>
+                        <td>
+                            <input type="radio" id="rating_good" name="rating" value="good">
+                            <label for="rating_good">Good</label>
+                            <input type="radio" id="rating_okay" name="rating" value="okay">
+                            <label for="rating_okay">Okay</label>
+                            <input type="radio" id="rating_bad" name="rating" value="bad">
+                            <label for="rating_bad">Bad</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Comments:</td>
+                        <td colspan="3">
+                            <textarea name="comments" rows="5" cols="50" wrap="hard" placeholder="Leave your feedback here..."></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" style="text-align: center;">
+                            <button type="submit">Submit</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <p><br>© 2025 Student in CSIT 121</p>
+        </footer>
+</div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.classList.add("sidenav-open");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.classList.remove("sidenav-open");
+        }
+    </script>
+    </body>
+</html>
